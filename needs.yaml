@@ -6,6 +6,10 @@ on:
       - main
       - develop
       - feature/*
+    
+  pull_requst:
+    branches:
+      - main
 
 jobs:
   code-quality:
