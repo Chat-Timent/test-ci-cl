@@ -1,6 +1,6 @@
 name: les variables et contextes
 on:
-  push::
+  push:
       branches:
         - main
         - develop
