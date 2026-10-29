@@ -21,7 +21,7 @@ jobs:
         id: quality-code-version
         run: echo "quality-code-version=1.0" >> $GITHUB_OUTPUT
       - name: linting-code-version
-        run: echo "la version de la qualité du code ${{needs.quality-code-version.output.quality-code-version}}"
+        run: echo "la version de la qualité du code ${{steps.quality-code-version.outputs.quality-code-version}}"
 
   static-analysis:
     runs-on: ubuntu-latest
@@ -41,7 +41,7 @@ jobs:
       - name: exécuter les test
         run: echo "tests en cours"
       - name: afficher la version de qualité du code
-        run: echo "La version de la qualité du code {{ needs.code-quality.output.quality-code-version }}"
+        run: echo "La version de qualité du code ${{ needs.code-quality.outputs.quality-code-version }}"
 
   
   build:
