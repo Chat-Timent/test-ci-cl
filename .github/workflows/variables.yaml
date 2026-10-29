@@ -4,9 +4,9 @@ on:
       branches:
         - main
         - develop
-  env:
-    MA_VARIABLE: variable dans le workflow
-    AUTRE_VARIABLE: une autre valeur globale
+env:
+  MA_VARIABLE: variable dans le workflow
+  AUTRE_VARIABLE: une autre valeur globale
 
 jobs:
   variable-et-contexte:
