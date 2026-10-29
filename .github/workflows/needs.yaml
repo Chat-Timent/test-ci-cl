@@ -15,6 +15,11 @@ jobs:
         run: echo "vérif de la qualité du code"
       - name: linting du code
         run: echo "linting du code"
+      - name: quality code version
+        id: quality-code-version
+        run: echo "quality-code-version=1.0" >> $GITHUB_OUTPUT
+      - name: linting-code-version
+        run: echo "la version de la qualité du code ${{steps.quality-code-version.outputs.quality-code-version}}" >> $GITHUB_OUTPUT
 
   static-analysis:
     runs-on: ubuntu-latest
